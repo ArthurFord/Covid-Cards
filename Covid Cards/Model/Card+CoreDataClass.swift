@@ -8,10 +8,14 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 @objc(Card)
 public class Card: NSManagedObject {
 
+    @Environment(\.managedObjectContext) private var viewContext
     
-
+    
 }
+
+var dummyCard = Card()

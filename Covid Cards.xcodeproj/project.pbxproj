@@ -13,8 +13,12 @@
 		CE2CB1D12709B88200539D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2CB1D02709B88200539D6C /* Preview Assets.xcassets */; };
 		CE2CB1D32709B88200539D6C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1D22709B88200539D6C /* Persistence.swift */; };
 		CE2CB1D62709B88200539D6C /* Covid_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1D42709B88200539D6C /* Covid_Cards.xcdatamodeld */; };
-		CE2CB1DE2709B92E00539D6C /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1DC2709B92E00539D6C /* Card+CoreDataClass.swift */; };
-		CE2CB1DF2709B92E00539D6C /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1DD2709B92E00539D6C /* Card+CoreDataProperties.swift */; };
+		CE2CB1E42709C68800539D6C /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1E22709C68800539D6C /* Card+CoreDataClass.swift */; };
+		CE2CB1E52709C68800539D6C /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1E32709C68800539D6C /* Card+CoreDataProperties.swift */; };
+		CE2CB1E72709C6FE00539D6C /* NewCardSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1E62709C6FE00539D6C /* NewCardSheetView.swift */; };
+		CE2CB1EA2709CDA200539D6C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1E92709CDA200539D6C /* ImagePicker.swift */; };
+		CE2CB1ED2709E65A00539D6C /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1EC2709E65A00539D6C /* CardDetailView.swift */; };
+		CE2CB1EF2709F8A800539D6C /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1EE2709F8A800539D6C /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +29,13 @@
 		CE2CB1D02709B88200539D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE2CB1D22709B88200539D6C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CE2CB1D52709B88200539D6C /* Covid_Cards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Covid_Cards.xcdatamodel; sourceTree = "<group>"; };
-		CE2CB1DC2709B92E00539D6C /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CE2CB1DD2709B92E00539D6C /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE2CB1E22709C68800539D6C /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE2CB1E32709C68800539D6C /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE2CB1E62709C6FE00539D6C /* NewCardSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardSheetView.swift; sourceTree = "<group>"; };
+		CE2CB1E92709CDA200539D6C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CE2CB1EB2709DFB900539D6C /* Covid-Cards-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Covid-Cards-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CE2CB1EC2709E65A00539D6C /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		CE2CB1EE2709F8A800539D6C /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,8 @@
 		CE2CB1C82709B87700539D6C /* Covid Cards */ = {
 			isa = PBXGroup;
 			children = (
+				CE2CB1EB2709DFB900539D6C /* Covid-Cards-Info.plist */,
+				CE2CB1E82709CD8800539D6C /* ViewModel */,
 				CE2CB1E12709BF1000539D6C /* View */,
 				CE2CB1E02709BF0000539D6C /* Model */,
 				CE2CB1C92709B87700539D6C /* Covid_CardsApp.swift */,
@@ -79,9 +90,9 @@
 		CE2CB1E02709BF0000539D6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE2CB1E22709C68800539D6C /* Card+CoreDataClass.swift */,
+				CE2CB1E32709C68800539D6C /* Card+CoreDataProperties.swift */,
 				CE2CB1D42709B88200539D6C /* Covid_Cards.xcdatamodeld */,
-				CE2CB1DC2709B92E00539D6C /* Card+CoreDataClass.swift */,
-				CE2CB1DD2709B92E00539D6C /* Card+CoreDataProperties.swift */,
 				CE2CB1D22709B88200539D6C /* Persistence.swift */,
 			);
 			path = Model;
@@ -91,8 +102,19 @@
 			isa = PBXGroup;
 			children = (
 				CE2CB1CB2709B87700539D6C /* CardsListView.swift */,
+				CE2CB1EE2709F8A800539D6C /* RowView.swift */,
+				CE2CB1E62709C6FE00539D6C /* NewCardSheetView.swift */,
+				CE2CB1EC2709E65A00539D6C /* CardDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CE2CB1E82709CD8800539D6C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CB1E92709CDA200539D6C /* ImagePicker.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2CB1ED2709E65A00539D6C /* CardDetailView.swift in Sources */,
+				CE2CB1EF2709F8A800539D6C /* RowView.swift in Sources */,
 				CE2CB1D32709B88200539D6C /* Persistence.swift in Sources */,
-				CE2CB1DE2709B92E00539D6C /* Card+CoreDataClass.swift in Sources */,
+				CE2CB1E42709C68800539D6C /* Card+CoreDataClass.swift in Sources */,
+				CE2CB1E72709C6FE00539D6C /* NewCardSheetView.swift in Sources */,
 				CE2CB1D62709B88200539D6C /* Covid_Cards.xcdatamodeld in Sources */,
-				CE2CB1DF2709B92E00539D6C /* Card+CoreDataProperties.swift in Sources */,
+				CE2CB1E52709C68800539D6C /* Card+CoreDataProperties.swift in Sources */,
+				CE2CB1EA2709CDA200539D6C /* ImagePicker.swift in Sources */,
 				CE2CB1CC2709B87700539D6C /* CardsListView.swift in Sources */,
 				CE2CB1CA2709B87700539D6C /* Covid_CardsApp.swift in Sources */,
 			);
@@ -304,12 +330,13 @@
 				DEVELOPMENT_TEAM = SLB347Y94F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Covid-Cards-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,12 +361,13 @@
 				DEVELOPMENT_TEAM = SLB347Y94F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Covid-Cards-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

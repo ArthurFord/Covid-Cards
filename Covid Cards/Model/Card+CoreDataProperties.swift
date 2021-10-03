@@ -18,6 +18,8 @@ extension Card {
 
     @NSManaged public var nameOnCard: String?
     @NSManaged public var card: Data?
+    @NSManaged public var dateAdded: Date?
+    @NSManaged public var vaccineDate: Date?
 
 }
 

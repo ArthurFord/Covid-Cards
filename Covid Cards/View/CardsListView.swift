@@ -16,14 +16,16 @@ struct CardsListView: View {
         animation: .default)
     private var cards: FetchedResults<Card>
 
+    @State private var showingSheet = false
+    
     var body: some View {
         NavigationView {
             List {
                 ForEach(cards) { card in
                     NavigationLink {
-                        Text(card.nameOnCard ?? "Name")
+                        CardDetailView(context: viewContext, card: card)
                     } label: {
-                        Text(card.nameOnCard ?? "Name")
+                        RowView(card: card)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -33,28 +35,17 @@ struct CardsListView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    Button(action: {
+                        showingSheet.toggle()
+                    }, label: {
+                        (Image(systemName: "plus"))
+                    })
+                        .sheet(isPresented: $showingSheet) {
+                            NewCardSheetView(context: viewContext)
+                        }
                 }
             }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Card(context: viewContext)
-            newItem.nameOnCard = "Name"
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            .navigationBarTitle("Vaccine Cards")
         }
     }
 
