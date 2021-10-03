@@ -13,7 +13,7 @@ struct Covid_CardsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardsListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

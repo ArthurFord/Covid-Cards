@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		CE2CB1CA2709B87700539D6C /* Covid_CardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1C92709B87700539D6C /* Covid_CardsApp.swift */; };
-		CE2CB1CC2709B87700539D6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1CB2709B87700539D6C /* ContentView.swift */; };
+		CE2CB1CC2709B87700539D6C /* CardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1CB2709B87700539D6C /* CardsListView.swift */; };
 		CE2CB1CE2709B88200539D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2CB1CD2709B88200539D6C /* Assets.xcassets */; };
 		CE2CB1D12709B88200539D6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2CB1D02709B88200539D6C /* Preview Assets.xcassets */; };
 		CE2CB1D32709B88200539D6C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1D22709B88200539D6C /* Persistence.swift */; };
 		CE2CB1D62709B88200539D6C /* Covid_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1D42709B88200539D6C /* Covid_Cards.xcdatamodeld */; };
+		CE2CB1DE2709B92E00539D6C /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1DC2709B92E00539D6C /* Card+CoreDataClass.swift */; };
+		CE2CB1DF2709B92E00539D6C /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1DD2709B92E00539D6C /* Card+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE2CB1C62709B87700539D6C /* Covid Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2CB1C92709B87700539D6C /* Covid_CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_CardsApp.swift; sourceTree = "<group>"; };
-		CE2CB1CB2709B87700539D6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE2CB1CB2709B87700539D6C /* CardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListView.swift; sourceTree = "<group>"; };
 		CE2CB1CD2709B88200539D6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2CB1D02709B88200539D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE2CB1D22709B88200539D6C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CE2CB1D52709B88200539D6C /* Covid_Cards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Covid_Cards.xcdatamodel; sourceTree = "<group>"; };
+		CE2CB1DC2709B92E00539D6C /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE2CB1DD2709B92E00539D6C /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,10 @@
 		CE2CB1C82709B87700539D6C /* Covid Cards */ = {
 			isa = PBXGroup;
 			children = (
+				CE2CB1E12709BF1000539D6C /* View */,
+				CE2CB1E02709BF0000539D6C /* Model */,
 				CE2CB1C92709B87700539D6C /* Covid_CardsApp.swift */,
-				CE2CB1CB2709B87700539D6C /* ContentView.swift */,
 				CE2CB1CD2709B88200539D6C /* Assets.xcassets */,
-				CE2CB1D22709B88200539D6C /* Persistence.swift */,
-				CE2CB1D42709B88200539D6C /* Covid_Cards.xcdatamodeld */,
 				CE2CB1CF2709B88200539D6C /* Preview Content */,
 			);
 			path = "Covid Cards";
@@ -71,6 +74,25 @@
 				CE2CB1D02709B88200539D6C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE2CB1E02709BF0000539D6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CB1D42709B88200539D6C /* Covid_Cards.xcdatamodeld */,
+				CE2CB1DC2709B92E00539D6C /* Card+CoreDataClass.swift */,
+				CE2CB1DD2709B92E00539D6C /* Card+CoreDataProperties.swift */,
+				CE2CB1D22709B88200539D6C /* Persistence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2CB1E12709BF1000539D6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE2CB1CB2709B87700539D6C /* CardsListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2CB1D32709B88200539D6C /* Persistence.swift in Sources */,
+				CE2CB1DE2709B92E00539D6C /* Card+CoreDataClass.swift in Sources */,
 				CE2CB1D62709B88200539D6C /* Covid_Cards.xcdatamodeld in Sources */,
-				CE2CB1CC2709B87700539D6C /* ContentView.swift in Sources */,
+				CE2CB1DF2709B92E00539D6C /* Card+CoreDataProperties.swift in Sources */,
+				CE2CB1CC2709B87700539D6C /* CardsListView.swift in Sources */,
 				CE2CB1CA2709B87700539D6C /* Covid_CardsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

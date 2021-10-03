@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CardsListView.swift
 //  Covid Cards
 //
 //  Created by Arthur Ford on 10/3/21.
@@ -8,22 +8,22 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct CardsListView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Card.nameOnCard, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var cards: FetchedResults<Card>
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(cards) { card in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        Text(card.nameOnCard ?? "Name")
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        Text(card.nameOnCard ?? "Name")
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -44,8 +44,8 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newItem = Card(context: viewContext)
+            newItem.nameOnCard = "Name"
 
             do {
                 try viewContext.save()
@@ -60,7 +60,7 @@ struct ContentView: View {
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { cards[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
@@ -83,6 +83,6 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        CardsListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
