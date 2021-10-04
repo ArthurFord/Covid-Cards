@@ -19,6 +19,7 @@
 		CE2CB1EA2709CDA200539D6C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1E92709CDA200539D6C /* ImagePicker.swift */; };
 		CE2CB1ED2709E65A00539D6C /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1EC2709E65A00539D6C /* CardDetailView.swift */; };
 		CE2CB1EF2709F8A800539D6C /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1EE2709F8A800539D6C /* RowView.swift */; };
+		CE2CB1F1270A353000539D6C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CB1F0270A352F00539D6C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CE2CB1EB2709DFB900539D6C /* Covid-Cards-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Covid-Cards-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CE2CB1EC2709E65A00539D6C /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		CE2CB1EE2709F8A800539D6C /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		CE2CB1F0270A352F00539D6C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				CE2CB1E32709C68800539D6C /* Card+CoreDataProperties.swift */,
 				CE2CB1D42709B88200539D6C /* Covid_Cards.xcdatamodeld */,
 				CE2CB1D22709B88200539D6C /* Persistence.swift */,
+				CE2CB1F0270A352F00539D6C /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				CE2CB1E52709C68800539D6C /* Card+CoreDataProperties.swift in Sources */,
 				CE2CB1EA2709CDA200539D6C /* ImagePicker.swift in Sources */,
 				CE2CB1CC2709B87700539D6C /* CardsListView.swift in Sources */,
+				CE2CB1F1270A353000539D6C /* Extensions.swift in Sources */,
 				CE2CB1CA2709B87700539D6C /* Covid_CardsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
